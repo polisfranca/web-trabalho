@@ -1,0 +1,483 @@
+/* ================================================
+   PORTFÓLIO - POLIANA SILVA DE FRANÇA
+   Arquivo: style.css
+   Tema: Hello Kitty — paleta 60% branco | 30% rosa | 10% accent
+   ================================================ */
+
+/* ---------- RESET ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ---------- VARIÁVEIS DE COR — TEMA CLARO (padrão) ---------- */
+/* 60% branco/creme, 30% rosa, 10% rosa escuro/accent */
+:root {
+  --branco:        #ffffff;
+  --creme:         #fff5f7;       /* 60% — fundo principal levemente rosado */
+  --rosa-claro:    #fce4ec;       /* Fundo de seções alternadas */
+  --rosa-medio:    #f48fb1;       /* 30% — elementos, bordas, destaques */
+  --rosa-forte:    #e91e8c;       /* 10% — accent: botões, títulos ativos */
+  --rosa-escuro:   #c2185b;       /* Hover dos botões */
+  --texto:         #4a1942;       /* Roxo escuro suave — leitura no branco */
+  --texto-claro:   #7b1fa2;       /* Texto secundário */
+  --borda:         #f8bbd0;       /* Borda dos cards */
+  --card-bg:       #ffffff;       /* Fundo dos cards */
+  --nav-bg:        #f8bbd0;       /* Menu rosa claro */
+  --nav-texto:     #880e4f;       /* Texto do menu */
+}
+
+/* ---------- TEMA ESCURO (ativado via JS) ---------- */
+body.tema-escuro {
+  --creme:         #1a0a14;
+  --rosa-claro:    #2d0a20;
+  --rosa-medio:    #e91e8c;
+  --texto:         #fce4ec;
+  --texto-claro:   #f48fb1;
+  --borda:         #4a1942;
+  --card-bg:       #2d1025;
+  --nav-bg:        #1a0a14;
+  --nav-texto:     #f48fb1;
+}
+
+/* ---------- BASE ---------- */
+body {
+  font-family: 'Quicksand', 'Segoe UI', sans-serif;
+  background-color: var(--creme);
+  color: var(--texto);
+  line-height: 1.7;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+a {
+  color: var(--rosa-forte);
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+/* ---------- MENU ---------- */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: var(--nav-bg);
+  box-shadow: 0 2px 12px rgba(233,30,140,0.15);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  height: 65px;
+}
+
+/* Logo com laço */
+.logo {
+  color: var(--nav-texto);
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: var(--nav-texto);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: var(--rosa-forte);
+  text-decoration: none;
+}
+
+/* Botão tema */
+.tema-btn {
+  background: none;
+  border: 2px solid var(--rosa-medio);
+  border-radius: 20px;
+  color: var(--nav-texto);
+  padding: 4px 12px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+}
+.tema-btn:hover { background-color: var(--rosa-claro); }
+
+/* Hamburguer mobile */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--nav-texto);
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+/* ---------- SEÇÕES ---------- */
+.secao {
+  padding: 100px 20px 60px;
+  min-height: 100vh;
+  background-color: var(--creme);
+}
+
+/* Seções alternadas em rosa suave */
+.secao-rosa {
+  background-color: var(--rosa-claro);
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Decoração topo da seção sobre */
+.hello-kitty-deco {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5rem;
+}
+
+/* Título de seção */
+.titulo-secao {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid var(--rosa-forte);
+  display: inline-block;
+  color: var(--rosa-forte);
+}
+
+.sub-titulo {
+  font-size: 1.2rem;
+  margin: 2rem 0 1rem;
+  color: var(--rosa-escuro);
+  font-weight: 700;
+}
+
+.subtexto {
+  color: var(--texto-claro);
+  margin-bottom: 2rem;
+}
+
+/* ---------- SOBRE MIM ---------- */
+.sobre-conteudo {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+/* Foto placeholder com laço */
+.foto-perfil-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Espaço para a foto — com laço decorativo se não tiver foto */
+.foto-placeholder {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--rosa-medio), var(--rosa-claro));
+  border: 4px solid var(--rosa-forte);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  box-shadow: 0 4px 20px rgba(233,30,140,0.25);
+}
+
+/* Se tiver foto real */
+.foto-perfil {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 40%;
+  border: 4px solid var(--rosa-forte);
+  box-shadow: 0 4px 20px rgba(233,30,140,0.25);
+}
+
+.sobre-texto {
+  flex: 2;
+  min-width: 260px;
+}
+
+/* Efeito digitando */
+#titulo-digitando {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--rosa-forte);
+  min-height: 2rem;
+}
+
+#titulo-digitando::after {
+  content: '|';
+  animation: piscar 0.7s infinite;
+  color: var(--rosa-medio);
+}
+
+@keyframes piscar {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+.sobre-texto p {
+  margin-bottom: 1rem;
+  color: var(--texto);
+}
+
+.info-lista {
+  list-style: none;
+  margin-top: 1.5rem;
+}
+.info-lista li { margin-bottom: 0.5rem; }
+
+/* Card lateral */
+.sobre-card {
+  flex: 1;
+  min-width: 220px;
+  background-color: var(--card-bg);
+  border: 2px solid var(--borda);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 16px rgba(233,30,140,0.1);
+}
+
+.sobre-card h4 {
+  color: var(--rosa-forte);
+  margin-bottom: 0.8rem;
+  font-weight: 700;
+}
+
+/* ---------- BARRAS DE HABILIDADES ---------- */
+.skill-bars { margin-bottom: 0.5rem; }
+.skill { margin-bottom: 0.9rem; }
+
+.skill-nome {
+  display: block;
+  font-size: 0.85rem;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+  color: var(--texto);
+}
+
+.barra-fundo {
+  width: 100%;
+  height: 8px;
+  background-color: var(--borda);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Gradiente rosa para as barras */
+.barra-preenchimento {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--rosa-medio), var(--rosa-forte));
+  border-radius: 10px;
+  transition: width 1.2s ease;
+}
+
+/* ---------- CARDS ---------- */
+.cards-grade {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.card {
+  background-color: var(--card-bg);
+  border: 2px solid var(--borda);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(233,30,140,0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(233,30,140,0.2);
+}
+
+.card h4 {
+  color: var(--rosa-forte);
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.instituicao {
+  font-weight: 700;
+  color: var(--texto);
+  margin-bottom: 0.3rem;
+}
+
+.periodo {
+  font-size: 0.85rem;
+  color: var(--texto-claro);
+  margin-bottom: 0.5rem;
+}
+
+/* Card com borda rosa forte à esquerda */
+.destaque {
+  border-left: 5px solid var(--rosa-forte);
+}
+
+/* ---------- PORTFÓLIO ---------- */
+.projeto { text-align: center; }
+
+.projeto-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.tecnologias {
+  font-size: 0.8rem;
+  color: var(--rosa-forte);
+  margin: 0.5rem 0 0.8rem;
+  font-style: italic;
+}
+
+/* Tag de categoria do projeto */
+.tag-projeto {
+  display: inline-block;
+  background-color: var(--rosa-claro);
+  color: var(--rosa-escuro);
+  border: 1px solid var(--rosa-medio);
+  border-radius: 20px;
+  padding: 3px 14px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+/* ---------- FORMULÁRIO DE CONTATO ---------- */
+.formulario {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.campo { margin-bottom: 1.5rem; }
+
+.campo label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 700;
+  color: var(--rosa-forte);
+}
+
+.campo input,
+.campo textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 2px solid var(--borda);
+  border-radius: 12px;
+  background-color: var(--branco);
+  color: var(--texto);
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.2s;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+  outline: none;
+  border-color: var(--rosa-forte);
+}
+
+.erro {
+  color: #e53935;
+  font-size: 0.85rem;
+  display: block;
+  margin-top: 0.3rem;
+  min-height: 1rem;
+}
+
+.btn-enviar {
+  width: 100%;
+  padding: 0.9rem;
+  background: linear-gradient(90deg, var(--rosa-medio), var(--rosa-forte));
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-family: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  letter-spacing: 0.5px;
+}
+
+.btn-enviar:hover { opacity: 0.85; }
+
+.sucesso {
+  display: none;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: #fce4ec;
+  color: var(--rosa-escuro);
+  border: 2px solid var(--rosa-medio);
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 700;
+}
+
+/* ---------- FADE-IN ---------- */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.fade-in.visivel {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------- RODAPÉ ---------- */
+footer {
+  background-color: var(--nav-bg);
+  color: var(--nav-texto);
+  text-align: center;
+  padding: 2rem;
+  font-weight: 600;
+}
+
+/* ---------- RESPONSIVO MOBILE ---------- */
+@media (max-width: 768px) {
+  .menu-toggle { display: block; }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    background-color: var(--nav-bg);
+    padding: 1rem 2rem;
+    gap: 1rem;
+  }
+
+  .nav-links.aberto { display: flex; }
+
+  .sobre-conteudo { flex-direction: column; }
+
+  .titulo-secao { font-size: 1.5rem; }
+
+  .foto-placeholder { margin: 0 auto; }
+}

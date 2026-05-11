@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Poliana França | Portfólio</title>
+  <!-- Fonte especial para dar o toque fofo -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ========== MENU DE NAVEGAÇÃO ========== -->
+  <header>
+    <nav>
+      <!-- Logo com laço da Hello Kitty -->
+      <div class="logo">🎀 Poliana França</div>
+
+      <!-- Botão hamburguer para mobile -->
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">&#9776;</button>
+
+      <!-- Links de navegação por âncoras -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#sobre">Sobre mim</a></li>
+        <li><a href="#formacao">Formação</a></li>
+        <li><a href="#portfolio">Portfólio</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+
+      <!-- Botão alternar tema -->
+      <button class="tema-btn" id="temaBtn" title="Alternar tema">🌙</button>
+    </nav>
+  </header>
+
+  <!-- ========== SEÇÃO 1: SOBRE MIM ========== -->
+  <section id="sobre" class="secao">
+    <div class="container">
+
+      <!-- Decoração Hello Kitty no topo -->
+      <div class="hello-kitty-deco">🎀 ✨ 🎀</div>
+
+      <h2 class="titulo-secao">Sobre mim</h2>
+
+      <div class="sobre-conteudo">
+
+        <!-- Foto de perfil sem fundo -->
+        <div class="foto-perfil-wrapper">
+          <img src="foto.jpg" alt="Foto de Poliana França" class="foto-perfil" />
+        </div>
+
+        <div class="sobre-texto">
+          <!-- Título com efeito digitando -->
+          <h3 id="titulo-digitando"></h3>
+
+          <p>
+            Estudante de <strong>Ciência da Computação</strong> no Centro Universitário Internacional (UNINTER), 
+            21 anos, nascida em <strong>Natal/RN</strong>. Apaixonada por tecnologia, comunicação e aprendizado contínuo.
+          </p>
+          <p>
+            Tenho experiência em atendimento ao cliente, suporte e gestão de redes sociais, 
+            aliando habilidades interpessoais à facilidade com tecnologia.
+          </p>
+
+          <!-- Contato rápido -->
+          <ul class="info-lista">
+            <li>📍 Natal/RN</li>
+            <li>📧 polianasilvadefranca@gmail.com</li>
+            <li>📱 (84) 999228507</li>
+            <li>🎂 21 anos</li>
+          </ul>
+        </div>
+
+        <!-- Card lateral de skills -->
+        <div class="sobre-card">
+          <h4>🌸 Skills</h4>
+          <div class="skill-bars">
+            <div class="skill">
+              <span class="skill-nome">💬 Boa Comunicação</span>
+              <div class="barra-fundo">
+                <div class="barra-preenchimento" data-nivel="90"></div>
+              </div>
+            </div>
+            <div class="skill">
+              <span class="skill-nome">🤝 Trabalho em Equipe</span>
+              <div class="barra-fundo">
+                <div class="barra-preenchimento" data-nivel="85"></div>
+              </div>
+            </div>
+            <div class="skill">
+              <span class="skill-nome">💻 Facilidade com Tecnologia</span>
+              <div class="barra-fundo">
+                <div class="barra-preenchimento" data-nivel="80"></div>
+              </div>
+            </div>
+            <div class="skill">
+              <span class="skill-nome">⚡ Proatividade</span>
+              <div class="barra-fundo">
+                <div class="barra-preenchimento" data-nivel="88"></div>
+              </div>
+            </div>
+          </div>
+
+          <h4 style="margin-top:1rem">🎀 Hobbies</h4>
+          <p>Tecnologia, redes sociais, idiomas e aprendizado contínuo.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SEÇÃO 2: FORMAÇÃO ========== -->
+  <section id="formacao" class="secao secao-rosa">
+    <div class="container">
+      <h2 class="titulo-secao">Formação</h2>
+
+      <!-- Formação Acadêmica -->
+      <h3 class="sub-titulo">🎓 Formação Acadêmica</h3>
+      <div class="cards-grade">
+
+        <div class="card">
+          <h4>Bacharelado em Ciência da Computação</h4>
+          <p class="instituicao">Centro Universitário Internacional (UNINTER)</p>
+          <p class="periodo">Fev/2025 – Presente</p>
+          <p>Formação em tecnologia, computação e desenvolvimento de sistemas.</p>
+        </div>
+
+        <div class="card">
+          <h4>Técnico em Logística</h4>
+          <p class="instituicao">IFRN – Instituto Federal do Rio Grande do Norte</p>
+          <p class="periodo">2022 – 2023</p>
+          <p>Formação técnica em logística, gestão e processos operacionais.</p>
+        </div>
+
+      </div>
+
+      <!-- Experiência Profissional -->
+      <h3 class="sub-titulo">💼 Experiência Profissional</h3>
+      <div class="cards-grade">
+
+        <div class="card destaque">
+          <h4>Expert em Interação / Atendente Linha de Frente</h4>
+          <p class="instituicao">Teleperformance</p>
+          <p class="periodo">Outubro 2025 – Presente</p>
+          <p>Atendimento a chamadas e registro de solicitações. Processamento de contestações e cancelamentos dos clientes.</p>
+        </div>
+
+        <div class="card destaque">
+          <h4>Suporte de Biometria Facial</h4>
+          <p class="instituicao">Arena das Dunas</p>
+          <p class="periodo">2025 (Freelancer)</p>
+          <p>Acolhimento de clientes com problemas de reconhecimento facial. Correção de erros em ingressos e cadastros.</p>
+        </div>
+
+      </div>
+
+      <!-- Idiomas -->
+      <h3 class="sub-titulo">🌍 Idiomas</h3>
+      <div class="cards-grade">
+        <div class="card">
+          <h4>🇺🇸 Inglês</h4>
+          <p>Nível intermediário com comunicação oral e escrita.</p>
+        </div>
+        <div class="card">
+          <h4>🇨🇳 Mandarim</h4>
+          <p>HSK 1 — nível básico.</p>
+        </div>
+        <div class="card">
+          <h4>🇧🇷 Português</h4>
+          <p>Nativo.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== SEÇÃO 3: PORTFÓLIO ========== -->
+  <section id="portfolio" class="secao">
+    <div class="container">
+      <h2 class="titulo-secao">Portfólio</h2>
+      <p class="subtexto">Trabalhos e projetos desenvolvidos ao longo da minha trajetória. 🌸</p>
+
+      <div class="cards-grade">
+
+        <div class="card projeto">
+          <div class="projeto-icon">📱</div>
+          <h4>Gestão de Redes Sociais</h4>
+          <p>Criação e publicação de conteúdo nas redes sociais do Berçário Primeira Infância, aumentando o engajamento.</p>
+          <p class="tecnologias">Instagram · Facebook · Canva · Copywriting</p>
+          <span class="tag-projeto">Comunicação</span>
+        </div>
+
+        <div class="card projeto">
+          <div class="projeto-icon">🎟️</div>
+          <h4>Suporte Biométrico – Arena das Dunas</h4>
+          <p>Suporte técnico presencial em eventos de grande porte, com foco em resolução rápida de problemas de acesso.</p>
+          <p class="tecnologias">Biometria Facial · Suporte ao Cliente · IoT</p>
+          <span class="tag-projeto">Tecnologia</span>
+        </div>
+
+        <div class="card projeto">
+          <div class="projeto-icon">🎓</div>
+          <h4>Portfólio Web — UNINTER</h4>
+          <p>Desenvolvimento deste portfólio pessoal como atividade prática da disciplina de Fundamentos da Programação Web.</p>
+          <p class="tecnologias">HTML5 · CSS3 · JavaScript</p>
+          <span class="tag-projeto">Desenvolvimento</span>
+        </div>
+
+        <div class="card projeto">
+          <div class="projeto-icon">🤝</div>
+          <h4>Atendimento Teleperformance</h4>
+          <p>Gestão de chamadas, registro e resolução de solicitações de clientes em ambiente de alta demanda.</p>
+          <p class="tecnologias">CRM · Atendimento · Comunicação</p>
+          <span class="tag-projeto">Atendimento</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SEÇÃO 4: CONTATO ========== -->
+  <section id="contato" class="secao secao-rosa">
+    <div class="container">
+      <h2 class="titulo-secao">Contato</h2>
+      <p class="subtexto">Adoraria conversar! Manda uma mensagem 🎀</p>
+
+      <!-- Formulário com validação em JavaScript -->
+      <form id="formContato" class="formulario" novalidate>
+
+        <div class="campo">
+          <label for="nome">Nome *</label>
+          <input type="text" id="nome" name="nome" placeholder="Seu nome completo" />
+          <span class="erro" id="erroNome"></span>
+        </div>
+
+        <div class="campo">
+          <label for="email">E-mail *</label>
+          <input type="email" id="email" name="email" placeholder="seu@email.com" />
+          <span class="erro" id="erroEmail"></span>
+        </div>
+
+        <div class="campo">
+          <label for="mensagem">Mensagem *</label>
+          <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem..."></textarea>
+          <span class="erro" id="erroMensagem"></span>
+        </div>
+
+        <button type="submit" class="btn-enviar">🎀 Enviar Mensagem</button>
+
+        <!-- Mensagem de sucesso — exibida via JS -->
+        <div class="sucesso" id="mensagemSucesso">
+          ✅ Mensagem enviada com sucesso! Em breve entrarei em contato 🎀
+        </div>
+
+      </form>
+    </div>
+  </section>
+
+  <!-- ========== RODAPÉ ========== -->
+  <footer>
+    <p>🎀 © 2025 Poliana Silva de França | Natal/RN 🎀</p>
+    <p>polianasilvadefranca@gmail.com · (84) 999228507</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
